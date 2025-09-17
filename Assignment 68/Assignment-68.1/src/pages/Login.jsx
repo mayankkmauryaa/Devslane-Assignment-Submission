@@ -39,23 +39,23 @@ const Login = () => {
 
 
     return (
-        <div className='min-h-screen bg-[url("/backlog.png")] bg-no-repeat bg-cover flex items-center justify-center '>
+        <div className='min-h-screen bg-blue-700 bg-no-repeat bg-cover flex items-center justify-center '>
             <form onSubmit={handleSubmit} className='text-white flex flex-col items-center border-4 border-green-300 p-8'>
                 <LiaCartArrowDownSolid className='text-9xl ' />
                 <div className='border-4 border-red-100 p-6 flex flex-col items-center gap-3 mt-4'>
                     <div className='relative'>
-                        <input onChange={handleChange} onBlur={handleBlur} value={values.username} type="text" name="username" placeholder='Username' className='border-4 border-amber-800 text-black w-[250px] pl-8 pr-2 py-1 rounded' />
+                        <input onChange={handleChange} onBlur={handleBlur} value={values.username} type="text" name="username" placeholder='Username' className='border-4 border-amber-800 w-[250px] pl-8 pr-2 py-1 rounded' />
                         <FiUser className='absolute top-2 left-2' />
                     </div>
                     {touched.username && errors.username && <div className='text-red-500'>{errors.username}</div>}
                     <div className='relative'>
-                        <input onChange={handleChange} onBlur={handleBlur} value={values.password} type="password" name="password" placeholder='Password' className='border-4 border-amber-800 text-black w-[250px] pl-8 pr-2 py-1 rounded' />
+                        <input onChange={handleChange} onBlur={handleBlur} value={values.password} type="password" name="password" placeholder='Password' className='border-4 border-amber-800 w-[250px] pl-8 pr-2 py-1 rounded' />
                         <RiLockPasswordFill className='absolute top-2 left-2' />
                     </div>
                     {touched.password && errors.password && <div className='text-red-500'>{errors.password}</div>}
                 </div>
                 <button disabled={!isValid && !dirty} className='text-blue-700 disabled:bg-gray-300 bg-white mt-6 w-full py-2 shadow shadow-black rounded text-sm font-bold'>LOGIN</button>
-                <Link to='/forgot' className='text-black text-sm ml-[53%] my-1'>Forgot password?</Link>
+                <Link to='/forgot' className=' text-sm ml-[53%] my-1'>Forgot password?</Link>
                 <div>Don't have an account? <Link to='/signup' className='my-1 underline text-blue-300'>click here</Link></div>
             </form>
         </div>
