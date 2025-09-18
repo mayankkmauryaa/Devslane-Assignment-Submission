@@ -123,7 +123,7 @@ I’ve deployed some React/Tailwind assignments for quick access (links will be 
 - 🔀 [Assignment 58 – React Router Advanced](https://your-live-demo-link.com)
 - ♻️ [Assignment 59 – React Lifecycle Methods](https://your-live-demo-link.com)
 - ⏳ [Assignment 68 – Async/Await](https://your-live-demo-link.com)
-- ✈️ [Assignment 71 – Redux Basics](https://your-live-demo-link.com)
+- 🗂 [Assignment 71 – Redux Basics](https://your-live-demo-link.com)
 - 🧩 [Assignment 72 – Redux Reducers](https://your-live-demo-link.com)
 - 📡 [Assignment 74 – Redux Saga](https://your-live-demo-link.com)
 - ⚡ [Assignment 78 – Redux Toolkit](https://your-live-demo-link.com)
