@@ -1,47 +1,51 @@
 ---
-
 # Devslane Assignment Submission
 
 This repository contains my **CodeYogi × Devslane** assignment submissions.
 The course covers a wide range of topics from **JavaScript fundamentals** to **React, Redux, TypeScript, Tailwind CSS, and advanced frontend concepts**.
 
 It is organized by levels/assignments, with each folder containing code, notes, or practice related to that level.
-
 ---
 
 ## 📚 Topics Covered
 
-* **JavaScript (Core + Advanced)**
+- **JavaScript (Core + Advanced)**
 
-  * Arrays, filter, reduce, closures, promises, async/await, error handling
-  * OOP (multiple parts), generators
-* **CSS & Tailwind CSS**
+  - Arrays, filter, reduce, closures, promises, async/await, error handling
+  - OOP (multiple parts), generators
 
-  * Atomic classes, responsive design, customizing Tailwind config
-* **React**
+- **CSS & Tailwind CSS**
 
-  * Hooks (useState, Context API, custom HOC)
-  * React Router (basic + advanced)
-  * Forms with Formik & Yup
-  * Lifecycle methods & class components
-* **State Management**
+  - Atomic classes, responsive design, customizing Tailwind config
 
-  * Redux, Redux Toolkit, Immer, Reselect
-  * Redux Saga for async operations
-* **Tooling**
+- **React**
 
-  * Git & GitHub
-  * npm & package.json
-  * Storybook
-* **TypeScript**
+  - Hooks (useState, Context API, custom HOC)
+  - React Router (basic + advanced)
+  - Forms with Formik & Yup
+  - Lifecycle methods & class components
 
-  * Basics, Any vs Unknown
-* **Projects**
+- **State Management**
 
-  * Checkout page (React)
-  * Cart API integration
-  * Login with JWT token
-  * API error handling & pagination
+  - Redux, Redux Toolkit, Immer, Reselect
+  - Redux Saga for async operations
+
+- **Tooling**
+
+  - Git & GitHub
+  - npm & package.json
+  - Storybook
+
+- **TypeScript**
+
+  - Basics, Any vs Unknown
+
+- **Projects**
+
+  - Checkout page (React)
+  - Cart API integration
+  - Login with JWT token
+  - API error handling & pagination
 
 ---
 
@@ -96,8 +100,8 @@ Devslane-Assignment-Submission/
 
 4. For plain JS/HTML assignments:
 
-   * Open the `.html` file directly in your browser
-   * Or run `.js` files using Node:
+   - Open the `.html` file directly in your browser
+   - Or run `.js` files using Node:
 
      ```bash
      node index.js
@@ -109,46 +113,48 @@ Devslane-Assignment-Submission/
 
 I’ve deployed some React/Tailwind assignments for quick access (links will be updated as I deploy more):
 
-* 🔢 [Assignment 50 – JS Filter & Modulus](https://your-live-demo-link.com)
-* 🎨 [Assignment 51 – CSS Atomic Classes](https://your-live-demo-link.com)
-* 🌈 [Assignment 52 – Tailwind Intro](https://your-live-demo-link.com)
-* 📱 [Assignment 53 – Responsive Design](https://your-live-demo-link.com)
-* ⚛️ [Assignment 54 – React Basics](https://your-live-demo-link.com)
-* 📝 [Assignment 55 – React Forms](https://your-live-demo-link.com)
-* 🧭 [Assignment 57 – React Router Basics](https://your-live-demo-link.com)
-* 🔀 [Assignment 58 – React Router Advanced](https://your-live-demo-link.com)
-* ♻️ [Assignment 59 – React Lifecycle Methods](https://your-live-demo-link.com)
-* ⏳ [Assignment 68 – Async/Await](https://your-live-demo-link.com)
-* 🗂 [Assignment 71 – Redux Basics](https://your-live-demo-link.com)
-* 🧩 [Assignment 72 – Redux Reducers](https://your-live-demo-link.com)
-* 📡 [Assignment 74 – Redux Saga](https://your-live-demo-link.com)
-* ⚡ [Assignment 78 – Redux Toolkit](https://your-live-demo-link.com)
-* 🔐 [Assignment 87 – TypeScript Basics](https://your-live-demo-link.com)
+- 🔢 [Assignment 50 – JS Filter & Modulus](https://your-live-demo-link.com)
+- 🎨 [Assignment 51 – CSS Atomic Classes](https://your-live-demo-link.com)
+- 🌈 [Assignment 52 – Tailwind Intro](https://your-live-demo-link.com)
+- 📱 [Assignment 53 – Responsive Design](https://your-live-demo-link.com)
+- ⚛️ [Assignment 54 – React Basics](https://your-live-demo-link.com)
+- 📝 [Assignment 55 – React Forms](https://your-live-demo-link.com)
+- 🧭 [Assignment 57 – React Router Basics](https://your-live-demo-link.com)
+- 🔀 [Assignment 58 – React Router Advanced](https://your-live-demo-link.com)
+- ♻️ [Assignment 59 – React Lifecycle Methods](https://your-live-demo-link.com)
+- ⏳ [Assignment 68 – Async/Await](https://your-live-demo-link.com)
+- ✈️ [Assignment 71 – Redux Basics](https://your-live-demo-link.com)
+- 🧩 [Assignment 72 – Redux Reducers](https://your-live-demo-link.com)
+- 📡 [Assignment 74 – Redux Saga](https://your-live-demo-link.com)
+- ⚡ [Assignment 78 – Redux Toolkit](https://your-live-demo-link.com)
+- 🔐 [Assignment 87 – TypeScript Basics](https://your-live-demo-link.com)
 
 ---
 
 ## 🛠 Tech Stack
 
-* **Languages:** JavaScript, TypeScript, HTML, CSS
-* **Frameworks/Libraries:** React, Redux, Redux Toolkit, Redux Saga, Tailwind CSS, Formik, Yup
-* **Tools:** Git, npm, Storybook, ESLint/Prettier (recommended)
+- **Languages:** JavaScript, TypeScript, HTML, CSS
+- **Frameworks/Libraries:** React, Redux, Redux Toolkit, Redux Saga, Tailwind CSS, Formik, Yup
+- **Tools:** Git, npm, Storybook, ESLint/Prettier (recommended)
 
 ---
 
 ## 📈 Progress
 
 ✅ All assignments completed (Levels 50 → 98)
+
 💯 Full scores on each submission
+
 ⚡ Continuously improving code quality and documentation
 
 ---
 
 ## 🌟 Next Steps
 
-* Build capstone projects using the same stack (React + Redux + TypeScript + APIs)
-* Deploy live demos with Vercel/Netlify
-* Add automated testing (Jest/React Testing Library)
-* Contribute to open-source projects
+- Build capstone projects using the same stack (React + Redux + TypeScript + APIs)
+- Deploy live demos with Vercel/Netlify
+- Add automated testing (Jest/React Testing Library)
+- Contribute to open-source projects
 
 ---
 
