@@ -39,17 +39,17 @@ const Login = () => {
 
 
     return (
-        <div className='min-h-screen bg-blue-700 bg-no-repeat bg-cover flex items-center justify-center '>
-            <form onSubmit={handleSubmit} className='text-white flex flex-col items-center border-4 border-green-300 p-8'>
+        <div className='min-h-screen bg-blue-700 bg-no-repeat bg-cover flex items-center justify-center'>
+            <form onSubmit={handleSubmit} className='text-white flex flex-col items-center'>
                 <LiaCartArrowDownSolid className='text-9xl ' />
-                <div className='border-4 border-red-100 p-6 flex flex-col items-center gap-3 mt-4'>
+                <div className='flex flex-col items-center gap-3 mt-4'>
                     <div className='relative'>
-                        <input onChange={handleChange} onBlur={handleBlur} value={values.username} type="text" name="username" placeholder='Username' className='border-4 border-amber-800 w-[250px] pl-8 pr-2 py-1 rounded' />
+                        <input onChange={handleChange} onBlur={handleBlur} value={values.username} type="text" name="username" placeholder='Username' className='border w-[250px] pl-8 pr-2 py-1 rounded' />
                         <FiUser className='absolute top-2 left-2' />
                     </div>
                     {touched.username && errors.username && <div className='text-red-500'>{errors.username}</div>}
                     <div className='relative'>
-                        <input onChange={handleChange} onBlur={handleBlur} value={values.password} type="password" name="password" placeholder='Password' className='border-4 border-amber-800 w-[250px] pl-8 pr-2 py-1 rounded' />
+                        <input onChange={handleChange} onBlur={handleBlur} value={values.password} type="password" name="password" placeholder='Password' className='border w-[250px] pl-8 pr-2 py-1 rounded' />
                         <RiLockPasswordFill className='absolute top-2 left-2' />
                     </div>
                     {touched.password && errors.password && <div className='text-red-500'>{errors.password}</div>}

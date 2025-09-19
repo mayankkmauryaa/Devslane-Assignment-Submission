@@ -18,7 +18,7 @@ const HappyIncrementor: FC<HappyIncrementorProps> = () => {
       <h3>Are you happy?</h3>
       <button
         onClick={increment}
-        className="bg-orange-700 hover:cursor-pointer px-3 py-1 rounded"
+        className="bg-green-500 text-2xl text-white hover:cursor-pointer px-3 py-1 rounded"
       >
         Yes
       </button>

@@ -16,8 +16,8 @@ const ProductDetails = () => {
   }
 
   return (
-    <div className="bg-[#F4F5F6]">
-      <Link to="/" className="text-3xl text-[#FF5151] flex items-center gap-2 ml-8 mt-4">
+    <div className="bg-[#f1a4b2]">
+      <Link to="/" className="text-3xl text-[#FF5151] flex items-center gap-2 ml-8 mt-4 p-8">
         <FiArrowLeftCircle /> Back
       </Link>
       <div className="flex flex-col sm:flex-row mx-[20px] gap-4 px-8 py-6 bg-white sm:mx-[80px] mb-[40px] mt-[10px]">

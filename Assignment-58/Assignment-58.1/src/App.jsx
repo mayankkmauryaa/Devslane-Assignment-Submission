@@ -8,12 +8,15 @@ import Footer from './components/Footer'
 const App = () => {
   return (
     <>
-    <Header/>
-    {/* <Routes>
-      <Route path='/' element={<Main/>}/>
-      <Route path='/details/:id' element={<ProductDetails/>}/>
-    </Routes> */}
-    <Footer/>
+      <Header />
+      <Routes>
+        <Route path='/' element={<Main />} />
+        <Route path='/details/:id' element={<ProductDetails />} />
+      </Routes>
+      <div className="fixed min-w-full bottom-0">
+      <Footer />
+      </div>
+        
     </>
   )
 }

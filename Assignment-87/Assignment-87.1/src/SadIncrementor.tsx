@@ -17,7 +17,7 @@ const SadIncrementor: FC<SadIncrementorProps> = () => {
       <h3>Are you sad?</h3>
       <button
         onClick={increment}
-        className="bg-blue-700 hover:cursor-pointer px-3 py-1 rounded"
+        className="bg-red-700 text-2xl text-white hover:cursor-pointer px-3 py-1 rounded"
       >
         Yes
       </button>

@@ -9,7 +9,7 @@ const SadTracker: FC<SadTrackerProps> = () => {
   const sadCount = useSelector(sadCountSelector);
 
   return (
-    <div className="bg-blue-700 px-8 py-4">
+    <div className="bg-orange-500 px-8 py-4">
       You were sad {sadCount} times
     </div>
   );
