@@ -1,85 +1,141 @@
-import React, { useState } from 'react'
+import React from "react";
 import { LiaCartArrowDownSolid } from "react-icons/lia";
 import { FiUser } from "react-icons/fi";
 import { RiLockPasswordFill } from "react-icons/ri";
-import { withFormik } from 'formik';
-import * as Yup from 'yup';
-import { Link } from 'react-router';
 import { AiOutlineMail } from "react-icons/ai";
+import { withFormik } from "formik";
+import * as Yup from "yup";
+import { Link } from "react-router-dom";
 
-
-function handleFormSubmit(values) {
-    // e.preventDefault();
-    console.log("data submitted", values.username, values.password);
-}
-
+// --- Validation Schema ---
 const schema = Yup.object().shape({
-    username: Yup.string().min(5).required(),
-    email: Yup.string().email().required(),
-    password: Yup.string().min(8, "password must be 8 letter").required(),
+    username: Yup.string()
+        .min(5, "Username must be at least 5 characters")
+        .required("Username is required"),
+    email: Yup.string()
+        .email("Invalid email format")
+        .required("Email is required"),
+    password: Yup.string()
+        .min(8, "Password must be at least 8 characters")
+        .required("Password is required"),
 });
 
+// --- Initial Values ---
 const initialValues = {
     username: "",
     email: "",
     password: "",
+};
+
+// --- Submit Handler ---
+function handleFormSubmit(values, { setSubmitting, resetForm }) {
+    console.log("Form submitted:", values);
+    // Here you’d usually call your API:
+    // axios.post("/signup", values).then(...)
+
+    setSubmitting(false);
+    resetForm();
 }
 
-
-
-const SignUP = ({ handleSubmit, values, handleChange, errors, handleBlur, touched, dirty, isValid }) => {
-    // const [username, setUsername] = useState("");
-    // const [password, setPassword] = useState("");
-
-
-
-    // const {handleSubmit, values, handleChange, errors, handleBlur, touched, dirty, isValid  } = useFormik({
-    //     initialValues:{
-    //         username:"",
-    //         email:"",
-    //         password:"",
-    //     },
-    //     onSubmit: handleFormSubmit,
-    //     validationSchema: schema,
-    // });
-
-    // function handleUsernameChange(e) {
-    //     setUsername(e.target.value);
-    // }
-    // function handlePasswordChange(e) {
-    //     setPassword(e.target.value);
-    // }
-
-
+// --- Component ---
+const SignUp = ({
+    handleSubmit,
+    values,
+    handleChange,
+    errors,
+    handleBlur,
+    touched,
+    dirty,
+    isValid,
+    isSubmitting,
+}) => {
     return (
-        <div className='min-h-screen bg-blue-500 bg-no-repeat bg-cover flex items-center justify-center '>
-            <form onSubmit={handleSubmit} className='text-white flex flex-col items-center'>
-                <LiaCartArrowDownSolid className='text-9xl ' />
-                <div className='flex flex-col items-center gap-3 mt-4'>
-                    <div className='relative'>
-                        <input onChange={handleChange} onBlur={handleBlur} value={values.username} type="text" name="username" placeholder='Username' className='border w-[250px] pl-8 pr-2 py-1 rounded' />
-                        <FiUser className='absolute top-2 left-2' />
+        <div className="min-h-screen bg-blue-500 flex items-center justify-center">
+            <form
+                onSubmit={handleSubmit}
+                className="text-white flex flex-col items-center"
+            >
+                <LiaCartArrowDownSolid className="text-9xl" />
+
+                <div className="flex flex-col items-center gap-3 mt-4">
+                    {/* Username */}
+                    <div className="relative">
+                        <input
+                            onChange={handleChange}
+                            onBlur={handleBlur}
+                            value={values.username}
+                            type="text"
+                            name="username"
+                            placeholder="Username"
+                            className="border w-[250px] pl-8 pr-2 py-1 rounded"
+                        />
+                        <FiUser className="absolute top-2 left-2" />
                     </div>
-                    {touched.username && errors.username && <div className='text-red-500'>{errors.username}</div>}
-                    <div className='relative'>
-                        <input onChange={handleChange} onBlur={handleBlur} value={values.email} type="email" name="email" placeholder='Email' className='border w-[250px] pl-8 pr-2 py-1 rounded' />
-                        <AiOutlineMail className='absolute top-2 left-2' />
+                    {touched.username && errors.username && (
+                        <div className="text-red-500 text-sm">{errors.username}</div>
+                    )}
+
+                    {/* Email */}
+                    <div className="relative">
+                        <input
+                            onChange={handleChange}
+                            onBlur={handleBlur}
+                            value={values.email}
+                            type="email"
+                            name="email"
+                            placeholder="Email"
+                            className="border w-[250px] pl-8 pr-2 py-1 rounded"
+                        />
+                        <AiOutlineMail className="absolute top-2 left-2" />
                     </div>
-                    {touched.email && errors.email && <div className='text-red-500'>{errors.email}</div>}
-                    <div className='relative'>
-                        <input onChange={handleChange} onBlur={handleBlur} value={values.password} type="password" name="password" placeholder='Password' className='border w-[250px] pl-8 pr-2 py-1 rounded' />
-                        <RiLockPasswordFill className='absolute top-2 left-2' />
+                    {touched.email && errors.email && (
+                        <div className="text-red-500 text-sm">{errors.email}</div>
+                    )}
+
+                    {/* Password */}
+                    <div className="relative">
+                        <input
+                            onChange={handleChange}
+                            onBlur={handleBlur}
+                            value={values.password}
+                            type="password"
+                            name="password"
+                            placeholder="Password"
+                            className="border w-[250px] pl-8 pr-2 py-1 rounded"
+                        />
+                        <RiLockPasswordFill className="absolute top-2 left-2" />
                     </div>
-                    {touched.password && errors.password && <div className='text-red-500'>{errors.password}</div>}
+                    {touched.password && errors.password && (
+                        <div className="text-red-500 text-sm">{errors.password}</div>
+                    )}
                 </div>
-                <button disabled={!isValid && !dirty} className='text-blue-700 disabled:bg-gray-300 bg-white mt-6 w-full py-2 shadow hover:cursor-pointer shadow-black rounded text-sm font-bold'>SIGN UP</button>
-                <div className='my-2'>have an account? <Link to='/' className='underline text-blue-300'>login please!</Link></div>
+
+                {/* Submit Button */}
+                <button
+                    disabled={!(isValid && dirty) || isSubmitting}
+                    type="submit"
+                    className="text-blue-700 disabled:bg-gray-300 bg-white mt-6 w-full py-2 shadow shadow-black rounded text-sm font-bold hover:cursor-pointer"
+                >
+                    {isSubmitting ? "Signing Up..." : "SIGN UP"}
+                </button>
+
+                {/* Redirect Link */}
+                <div className="my-2">
+                    Have an account?{" "}
+                    <Link to="/login" className="underline text-blue-300">
+                        Login here
+                    </Link>
+                </div>
             </form>
         </div>
-    )
-}
+    );
+};
 
-const myHOC = withFormik({ validationSchema: schema, initialValues: initialValues, handleSubmit: handleFormSubmit });
-const ImprovedSignUp = myHOC(SignUP);
+// --- Wrap with Formik ---
+const EnhancedSignUp = withFormik({
+    validationSchema: schema,
+    initialValues,
+    handleSubmit: handleFormSubmit,
+})(SignUp);
 
-export default ImprovedSignUp;
+export default EnhancedSignUp;

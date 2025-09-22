@@ -7,21 +7,30 @@ import * as Yup from 'yup';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 
+// Use a constant for API URL
+const API_BASE_URL = "https://reqres.in/api"; // Replace with your own backend URL
 
-function handleFormSubmit(values, bag) {
-    // e.preventDefault();
-    axios.post("https://myeasykart.codeyogi.io/login", {
-        email: values.email,
-        password: values.password
-    })
-        .then((response) => {
-            const { user, token } = response.data;
-            localStorage.setItem("token", token);
-            bag.props.setUser(user);
-        })
-        .catch(() => {
-            console.log("error in login");
-        })
+async function handleFormSubmit(values, bag) {
+    try {
+        const response = await axios.post(`${API_BASE_URL}/login`, {
+            email: values.email,
+            password: values.password,
+        });
+
+        const { token } = response.data;
+
+        // Store token in localStorage
+        localStorage.setItem("token", token);
+
+        // If your backend also returns user info, set it here
+        if (response.data.user) {
+            bag.props.setUser(response.data.user);
+        }
+
+    } catch (error) {
+        console.error("Login failed:", error.response?.data || error.message);
+        alert("Invalid login. Please check your email and password.");
+    }
 }
 
 const schema = Yup.object().shape({
